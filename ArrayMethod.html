@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let num = [1 ,2,34,4,5];
+
+console.log(num);
+
+console.log(typeof num);   // num is object type
+
+let b = num.toString() ;
+
+console.log(typeof b);   // b is now string of the num
+         
+let c = num.join("_");   // join underscpre or any other symbols in each number
+console.log(c);
+
+num.pop();               // remove the last element
+console.log(num);
+
+num.push(99);            // addd the element in the array 
+console.log(num);
+
+let r = num.shift();    // remive the first element and return   and change in the main array
+console.log(r,num);
+
+let s = num.unshift();    // add in  last element and return 
+console.log(s,num);
+
+
+
+    </script>
+</body>
+</html>
