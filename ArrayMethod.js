@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="ArrayMethod.js">
-
 // let num = [1 ,2,34,4,5];
 
 // console.log(num);
@@ -78,11 +68,3 @@ console.log(jod);
 
 // let num = [1,2,3,4,5];
 // console.log(num.reverse);
-
-
-
-
-
-    </script>
-</body>
-</html>
