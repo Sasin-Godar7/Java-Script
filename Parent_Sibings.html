@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,29 @@
 </head>
 <!--first child of the body is div-->
 <!--after div the space will give the text node so to find the next siblings we connect the divs without the space in it-->
-<body><div><div class="first">First</div><div class="second">Second</div>
+
+<body>
+    <div>
+        <div class="first">First</div>
+        <div class="second">Second</div>
     </div>
     <script>
         console.log(document.body.firstChild);
 
-        let a =document.body.firstChild ;
-        
+        let a = document.body.firstChild;
+
         console.log(a.parentNode);
 
         console.log(a.parentElement);
 
         console.log(a.firstChild);
-        
+
         console.log(a.firstChild.nextSibling);
 
 
 
     </script>
-    
+
 </body>
+
 </html>
