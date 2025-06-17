@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><!-- child nodes  elements that are directly children 
+    for eg , head and body are the child of html tag ,,,,,,,,head and body are siblings -->
+
+    <!-- Descendent nodes -- all the nested elements,children their children and so on  -->
+
+    <div>
+        <p>this is me and i am great !!</p>
+    </div>
+
+    <script>
+
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+        console.log(document.body.childNodes);
+
+        // Element.childNodes[0] == Element.firstChild;
+        // Element.childNodes[Element.childNodes.length-1] == Element.lastChild;
+        // Element.haschildNodes to check if there is any child nodes 
+
+    </script>
+    
+</body>
+</html>
