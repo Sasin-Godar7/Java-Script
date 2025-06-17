@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body><!-- child nodes  elements that are directly children 
+<body>
+    <!-- child nodes  elements that are directly children 
     for eg , head and body are the child of html tag ,,,,,,,,head and body are siblings -->
 
     <!-- Descendent nodes -- all the nested elements,children their children and so on  -->
@@ -18,7 +19,13 @@
 
         console.log(document.body.firstChild);
         console.log(document.body.lastChild);
-        console.log(document.body.childNodes);
+
+         console.log(document.body.childNodes);       
+        //  this looks like an array but its no actually ,,it is collection but we can make it array using Array.from(collection) ie,
+
+        let arr = Array.from(document.body.childNodes); 
+        // now it is array
+        console.log(arr);
 
         // Element.childNodes[0] == Element.firstChild;
         // Element.childNodes[Element.childNodes.length-1] == Element.lastChild;
