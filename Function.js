@@ -30,20 +30,16 @@
 
 //         hello();  // this is envoking the hello function
 
-let age = Number.parseInt(prompt("Enter you age :"));
+let age = Number.parseInt(prompt("Enter your age:"));
 
-ageCheck(age);
+const ageCheck = (age) => {
+    if (age >= 18) {
+       alert("You can go for vote");
+    } else {
+      alert("You can't go for the vote");
+    }
+};
 
-const ageCheck=(age)=>
-{
-    if (age >= 18)
-    {
-        alert("you can go for vote");
-    }
-    else{
-     alert("you cant go for the vote");
-    }
-}
 ageCheck(age);
 
 
