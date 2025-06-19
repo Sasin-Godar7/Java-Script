@@ -38,7 +38,7 @@ const ageCheck=(age)=>
 {
     if (age <= 18);
     {
-        console.log("you can go for vote")
+        console.log("you can go for vote");
     }
 
 }
