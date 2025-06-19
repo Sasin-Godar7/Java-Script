@@ -40,9 +40,8 @@ const ageCheck=(age)=>
     {
         console.log("you can go for vote");
     }
-
-    else{
-        console.log("you cant go for the vote")
+    {
+        console.log("you cant go for the vote");
     }
 }
 
