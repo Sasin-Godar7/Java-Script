@@ -11,12 +11,12 @@
 
 
 
-    <form action="#">
-
-        <label for="roll">Roll no</label>
-        <input type="number" placeholder="enter your roll no " id="one" />
-    </form>
-
+   <form onsubmit="checkRank(event)">
+        <label for="roll">Roll no:</label>
+        <input type="number" placeholder="Enter your roll no" id="one" required />
+        <button type="submit">Check Rank</button>
+    </form >
+    
     <script>
         // alert("we are checking your age ");
         // let age = parseInt(prompt("enter ypu age here "));
@@ -59,22 +59,24 @@
         // let color = prompt("enter your fav color ");
         // document.body.style.background= color;
 
-        let roll = document.getElementById('one');
+               function checkRank(event) {
+            event.preventDefault(); // prevents page reload
 
-        if (roll == 1) {
-            alert("congratulation you are toppper");
-        }
-        else if (roll == 2) {
-            alert("you are the first runner up ");
-        }
-        else if (roll == 3) {
-            alert("you are the second runner up ");
-        }
-        else {
-            alert("congratulations your rank does'nt matter at all");
-        }
+            let roll = parseInt(document.getElementById('one').value);
 
-
+            if (roll === 1) {
+                alert("Congratulations, you are the topper!");
+            }
+            else if (roll === 2) {
+                alert("You are the first runner up.");
+            }
+            else if (roll === 3) {
+                alert("You are the second runner up.");
+            }
+            else {
+                alert("Congratulations, your rank doesn't matter at all!");
+            }
+        }
     </script>
 
 </body>
