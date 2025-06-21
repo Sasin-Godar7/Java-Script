@@ -27,4 +27,4 @@
           console.log(fruit);
 
           let str = "sasin ";
-          let strr = ""
+          let strr = "godar";
