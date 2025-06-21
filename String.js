@@ -25,3 +25,6 @@
 
           let fruit = "Banana \n apple";
           console.log(fruit);
+
+          let str = "sasin ";
+          let strr = ""
