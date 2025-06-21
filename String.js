@@ -29,5 +29,6 @@
           let str = "sasin ";
           let strr = "godar";
 
-          let jodni = 
+          let jodni = `${strr} is the surname of ${str}` ;
+          alert(jodni);
           alert(strr.length);
