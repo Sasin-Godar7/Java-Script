@@ -28,3 +28,5 @@
 
           let str = "sasin ";
           let strr = "godar";
+
+          alert(strr.length);
