@@ -29,4 +29,5 @@
           let str = "sasin ";
           let strr = "godar";
 
+          let jodni = 
           alert(strr.length);
