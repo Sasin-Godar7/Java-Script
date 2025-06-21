@@ -26,7 +26,7 @@ console.log(country.length);  // this will increase 1 character
 let fruit = "Banana \n apple";
 console.log(fruit);
 
-let str = "sasin ";
+let str = "sasin "; 
 let strr = "godar";
 
 let jodni = `${strr} is the surname of ${str}`;
