@@ -6,7 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="id1" class="class box"> This is the first Element</div>
+    <div id="id1" class="class box"> This is the first Element
+
+        <span id="sp"> this is span tag </span>
+    </div>
 
     <div id="id2"> This is the second Element</div>
 
@@ -17,8 +20,17 @@
         console.log(id1);
 
         console.log(id1.matches(".class"));     // element contain the class named class
-        console.log(id1.matches(".box"));       // element contain the class named box      so both will return true
+        console.log(id1.matches(".box"));       // element contain the class named box   -->   so both will return true
         
+
+
+        let p = document.getElementById("sp")
+        let result = p.closest(".box");                        
+        console.log(result);
+
+        // let p = document.getElementById("sp")                 here the .boxss classs doesnot exit in the grand/parent soo return null
+        // let result = p.closest(".boxssss");
+        // console.log(result);
     </script>
     
 </body>
