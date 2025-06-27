@@ -16,6 +16,8 @@
     <script>
         // console.log(id1);    not a good practise
 
+        console.log("matches()")
+
         let id1 = document.getElementById("id1");
         console.log(id1);
 
@@ -23,6 +25,7 @@
         console.log(id1.matches(".box"));       // element contain the class named box   -->   so both will return true
         
 
+               console.log("closest()");
 
         let p = document.getElementById("sp")
         let result = p.closest(".box");                        
@@ -31,6 +34,18 @@
         // let p = document.getElementById("sp")                 here the .boxss classs doesnot exit in the grand/parent soo return null
         // let result = p.closest(".boxssss");
         // console.log(result);
+
+   
+                console.log("contains()")
+ 
+       console.log(id1.contains(sp));                            //true
+             console.log(sp.contains(sp));                          //true
+                console.log(id1.contains(id1));                       //true
+
+             console.log(sp.contains(id1));                                    //false
+          
+
+        
     </script>
     
 </body>
