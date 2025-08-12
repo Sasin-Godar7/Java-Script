@@ -1,10 +1,12 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form>
         <label for="num1">Number 1 :</label>
@@ -14,69 +16,40 @@
         <input type="number" id="num2" placeholder="enter the number" />
         <br><br>
 
-        <input type="radio"  id="add" value="add" name="operator" >add &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <input type="radio" id="add" value="+" name="operator" checked>add &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-        <input type="radio"  id="sub" value="sub" name="operator">sub &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <input type="radio" id="sub" value="-" name="operator">sub &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-        <input type="radio"  id="add" value="div" name="operator">div &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <input type="radio" id="div" value="/" name="operator">div &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-        <input type="radio"  id="add" value="mul" name="operator">mul &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="radio" id="mul" value="*" name="operator">mul &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         <br><br>
-        
+
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         <input type="button"  id="btn" value="result" onclick="calculate()" />
+        <button onclick="calculate()"> Calculate</button>
 
     </form>
-     <h1 id="result" >Result is : <input type="text" id="res" /> </h1> &nbsp; &nbsp; &nbsp; &nbsp; 
-
-     <script>
-        let num1 = document.getElementById("num1");
-        let num2 = document.getElementById("num2");
-
-        const addition =(sum) =>{
-            let ans = n1 + n2;
-            document.getElementById("res").innerHTML=""+ ans;
-
-        }
-
-        function calculate()
-        {
-           
-        }
-
-    
-     </script>
-
-</body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html>
-<body>
-    <input type="number" id="num1" placeholder="Number 1"><br><br>
-    <input type="number" id="num2" placeholder="Number 2"><br><br>
-
-    <input type="radio" name="op" value="add"> Add
-    <input type="radio" name="op" value="sub"> Sub
-    <input type="radio" name="op" value="mul"> Mul
-    <input type="radio" name="op" value="div"> Div
-    <br><br>
-
-    <button onclick="calc()">Result</button>
-    <h3>Result is: <input type="text" id="res"></h3>
+    <h1 id="result">Result is : <input type="text" id="res" /> </h1> &nbsp; &nbsp; &nbsp; &nbsp;
 
     <script>
-        function calc(){
-            let a = +num1.value;
-            let b = +num2.value;
-            let op = document.querySelector('[name="op"]:checked').value;
 
-            if(op=="add") res.value = a + b;
-            else if(op=="sub") res.value = a - b;
-            else if(op=="mul") res.value = a * b;
-            else if(op=="div") res.value = a / b;
+        const calculate = (calculate) => {
+            const num1 = document.getElementById("num1").value;
+            const num2 = document.getElementById("num2").value;
+
+            const operator = document.querySelector('input[name="operator"]:checked').value;
+
+            switch(operator)
+            {
+                case "+" :
+                    res
+            }
+
         }
+
+
     </script>
+
 </body>
+
 </html>
