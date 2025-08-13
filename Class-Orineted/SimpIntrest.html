@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset style="width: 50px;">
+        <f orm>
+
+            <label for="principle">Principle Amount</label>
+            <input type="text" id="principle" placeholder="Enter principle">
+            <br><br>
+            <label for="rate">Rate of Intrest</label>
+            <input type="text" id="rate" placeholder="Enter rate">
+            <br><br>
+            <label for="time">Time </label>
+            <input type="text" id="time" placeholder="Enter time">
+            <br><br>
+            <button type="button" onclick="calculate()">Calculate Simple Intrest</button>
+
+
+            </form>
+    
+
+    <h3>Simple Intrest is :<input type="text" id="res" readonly> </h3>
+    </fieldset>
+
+    <script>
+        function calculate() {
+            const p = parseFloat(document.getElementById("principle").value);
+            const r = parseFloat(document.getElementById("rate").value);
+            const t = parseFloat(document.getElementById("time").value);
+
+            let si = (p * t * r) / 100;
+
+            document.getElementById("res").value = si;
+        }
+    </script>
+</body>
+
+</html>
