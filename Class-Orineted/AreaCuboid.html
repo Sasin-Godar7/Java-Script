@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset style="">
+        <form>
+            <label for="length">Length :</label>
+            <input type="text" id="length" placeholder="Enter length">
+            <br><br>
+            <label for="breadth">breadth :</label>
+            <input type="text" id="breadth" placeholder="Enter breadth">
+            <br><br>
+            <label for="height">Time </label>
+            <input type="text" id="height" placeholder="Enter height">
+            <br><br>
+            <button type="button" onclick="areaOfRectangle()">Area of Rectangle</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button type="button" onclick="volumeOfCuboid()">Volume of Cuboid</button>
+
+            <br><br>
+
+
+        </form>
+        <h3 id="res1"></h3>
+        <h3 id="res2"></h3>
+    </fieldset>
+
+    <script>
+
+        function areaOfRectangle() {
+            const l = parseFloat(document.getElementById("length").value);
+            const b = parseFloat(document.getElementById("breadth").value);
+            const h = parseFloat(document.getElementById("height").value);
+
+            let area = l * b;
+
+            document.getElementById("res1").innerHTML = "Area of rectagle is :" + area;
+        }
+
+        function volumeOfCuboid() {
+            const l = parseFloat(document.getElementById("length").value);
+            const b = parseFloat(document.getElementById("breadth").value);
+            const h = parseFloat(document.getElementById("height").value);
+
+            let volume = l * b * h;
+
+            document.getElementById("res2").innerHTML = "Volume of Cuboid is  :" + volume;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
