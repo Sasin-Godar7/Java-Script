@@ -4,43 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Area & Volume Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        fieldset {
+            background: white;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        legend {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #c77e2b;
+        }
+
+        #res1,
+        #res2 {
+            background: #f1f1f1;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <fieldset style="">
+    <fieldset>
+        <legend>Area & Volume Calculator</legend>
         <form>
             <label for="length">Length :</label>
             <input type="text" id="length" placeholder="Enter length">
-            <br><br>
-            <label for="breadth">breadth :</label>
+
+            <label for="breadth">Breadth :</label>
             <input type="text" id="breadth" placeholder="Enter breadth">
-            <br><br>
-            <label for="height">Time </label>
+
+            <label for="height">Height :</label>
             <input type="text" id="height" placeholder="Enter height">
-            <br><br>
-            <button type="button" onclick="areaOfRectangle()">Area of Rectangle</button>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <button type="button" onclick="volumeOfCuboid()">Volume of Cuboid</button>
 
-            <br><br>
-
-
+            <div style="display: flex; justify-content: space-between;">
+                <button type="button" onclick="areaOfRectangle()">Area</button>
+                <button type="button" onclick="volumeOfCuboid()">Volume</button>
+            </div>
         </form>
-        <h3 id="res1"></h3>
-        <h3 id="res2"></h3>
+
+        <div id="res1">Area of Rectangle: </div>
+        <div id="res2">Volume of Cuboid: </div>
     </fieldset>
 
     <script>
-
         function areaOfRectangle() {
             const l = parseFloat(document.getElementById("length").value);
             const b = parseFloat(document.getElementById("breadth").value);
-            const h = parseFloat(document.getElementById("height").value);
+
+            if (isNaN(l) || isNaN(b)) {
+                document.getElementById("res1").innerHTML = "⚠ Please enter valid numbers!";
+                return;
+            }
 
             let area = l * b;
-
-            document.getElementById("res1").innerHTML = "Area of rectagle is :" + area;
+            document.getElementById("res1").innerHTML = "Area of Rectangle: " + area;
         }
 
         function volumeOfCuboid() {
@@ -48,15 +114,15 @@
             const b = parseFloat(document.getElementById("breadth").value);
             const h = parseFloat(document.getElementById("height").value);
 
+            if (isNaN(l) || isNaN(b) || isNaN(h)) {
+                document.getElementById("res2").innerHTML = "⚠ Please enter valid numbers!";
+                return;
+            }
+
             let volume = l * b * h;
-
-            document.getElementById("res2").innerHTML = "Volume of Cuboid is  :" + volume;
+            document.getElementById("res2").innerHTML = "Volume of Cuboid: " + volume;
         }
-
-
-
     </script>
-
 </body>
 
 </html>
