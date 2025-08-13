@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -16,23 +16,28 @@
         <label>Number 2 :</label>
         <input type="number" id="num2" placeholder="enter the number" />
         <br><br>
+        <label for="op">Operation :</label>
+        <select name="operator" id="op">
+            <option value="+" name="operator" selected>Addition</option>
+            <option value="-" name="operator">subtraction</option>
+            <option value="*" name="operator">Multiplication</option>
+            <option value="/" name="operator">Division</option>
+        </select>
 
-        <input type="radio" value="+" name="operator" checked> add
-        <input type="radio" value="-" name="operator"> sub
-        <input type="radio" value="/" name="operator"> div
-        <input type="radio" value="*" name="operator"> mul
+
         <br><br>
-
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" onclick="calculate()">Calculate</button>
     </form>
 
-    <h3>Result: <input type="text" id="res" /></h3>
+    <h3>Result: <input type="text" id="res" readonly /> </h3>
+
 
     <script>
         function calculate() {
             let num1 = parseFloat(document.getElementById("num1").value);
             let num2 = parseFloat(document.getElementById("num2").value);
-            let operator = document.querySelector('input[name="operator"]:checked').value;
+            let operator = document.getElementById('op').value;
             let result;
 
             switch (operator) {
@@ -43,7 +48,7 @@
                     result = num1 - num2;
                     break;
                 case '/':
-                    result = num2 !== 0 ? num1 / num2 : "Error";
+                    result = num2 !== 0 ? num1 / num2 : "Error: cannot divide by zero ";
                     break;
                 case '*':
                     result = num1 * num2;
@@ -52,6 +57,11 @@
 
             document.getElementById("res").value = result;
         }
+
+
+
     </script>
+
 </body>
+
 </html>
